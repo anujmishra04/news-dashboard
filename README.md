@@ -6,6 +6,14 @@ A responsive React-based dashboard for managing and analyzing news articles with
 
 **Each user must get their own API key - API keys cannot be shared!**
 
+### Quick Start (Using Demo API Key)
+For immediate testing, you can use this demo API key:
+```
+REACT_APP_NEWS_API_KEY=9c57cb5328f14c8f9c57cb5328f14c8f
+```
+
+⚠️ **Note:** This is a demo key with limited usage. For production or personal use, please get your own API key.
+
 ### How to Get Your Free API Key:
 
 1. Go to [News API](https://newsapi.org/)
