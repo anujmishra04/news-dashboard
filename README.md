@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# News Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React-based dashboard for managing and analyzing news articles with user authentication, admin features, and analytics.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🔐 **User Authentication**
+  - Email/password login system
+  - Role-based access (Admin/Regular User)
+  - Protected routes
 
-### `npm start`
+- 📰 **News Integration**
+  - Real-time news fetching from News API
+  - Article display with images, titles, and descriptions
+  - Author and publication date information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔍 **Advanced Filtering**
+  - Search by keywords
+  - Filter by author
+  - Filter by date range
+  - Filter by category
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 💰 **Payout Management** (Admin Only)
+  - Set payout rates per article
+  - Automatic payout calculations
+  - Payout history tracking
 
-### `npm test`
+- 📊 **Analytics Dashboard** (Admin Only)
+  - Articles by source visualization
+  - Articles by date trends
+  - Payout distribution charts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 📤 **Export Functionality** (Admin Only)
+  - Export to PDF
+  - Export to CSV
+  - Google Sheets integration
 
-### `npm run build`
+## Demo Credentials
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Admin Access
+- Email: admin@example.com
+- Password: admin123
+*(Any email containing "admin" will work)*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Regular User Access
+- Email: user@example.com
+- Password: password123
+*(Any email not containing "admin" will work)*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- News API key (get it from [News API](https://newsapi.org/))
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+```bash
+git clone https://github.com/anujmishra04/news-dashboard.git
+cd news-dashboard
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Create a `.env.local` file in the root directory and add your News API key:
+```
+REACT_APP_NEWS_API_KEY=your_api_key_here
+```
 
-## Learn More
+4. Start the development server:
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tech Stack
 
-### Code Splitting
+- React.js
+- Redux for state management
+- Chart.js for analytics
+- News API for news data
+- CSS for styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+```
+news-dashboard/
+├── src/
+│   ├── components/
+│   │   ├── Auth/
+│   │   │   └── Login.jsx
+│   │   └── Dashboard/
+│   │       ├── AnalyticsChart.jsx
+│   │       ├── ExportButtons.jsx
+│   │       ├── Filters.jsx
+│   │       ├── NewsList.jsx
+│   │       └── PayoutCalculator.jsx
+│   ├── pages/
+│   │   ├── DashboardPage.jsx
+│   │   └── LoginPage.jsx
+│   ├── redux/
+│   │   ├── reducers/
+│   │   │   ├── authReducer.js
+│   │   │   └── newsReducer.js
+│   │   └── store.js
+│   └── App.js
+└── package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [News API](https://newsapi.org/) for providing the news data
+- [Chart.js](https://www.chartjs.org/) for analytics visualization
+- [React](https://reactjs.org/) for the frontend framework
