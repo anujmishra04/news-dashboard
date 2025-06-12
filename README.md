@@ -2,19 +2,27 @@
 
 A responsive React-based dashboard for managing and analyzing news articles with user authentication, admin features, and analytics.
 
-## ⚠️ Important: News API Key Required
+## ⚠️ Important: You Need Your Own News API Key
 
-This application requires a News API key to function. You can get a free API key by following these steps:
+**Each user must get their own API key - API keys cannot be shared!**
+
+### How to Get Your Free API Key:
 
 1. Go to [News API](https://newsapi.org/)
 2. Click "Get API Key" and sign up for a free account
-3. Once registered, you'll get your API key
+3. After registration, you'll receive your personal API key
 4. Create a `.env.local` file in the project root and add:
    ```
-   REACT_APP_NEWS_API_KEY=your_api_key_here
+   REACT_APP_NEWS_API_KEY=your_personal_api_key_here
    ```
 
-**Note:** The free tier of News API has some limitations:
+### Why You Need Your Own API Key:
+- API keys are personal and tied to your account
+- The free tier has a limit of 100 requests per day
+- Sharing API keys violates News API's terms of service
+- Each user needs their own key for proper usage tracking
+
+### Free Tier Limitations:
 - 100 requests per day
 - Only works on localhost
 - Limited to headlines and top news
