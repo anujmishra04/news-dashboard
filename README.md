@@ -2,6 +2,23 @@
 
 A responsive React-based dashboard for managing and analyzing news articles with user authentication, admin features, and analytics.
 
+## ⚠️ Important: News API Key Required
+
+This application requires a News API key to function. You can get a free API key by following these steps:
+
+1. Go to [News API](https://newsapi.org/)
+2. Click "Get API Key" and sign up for a free account
+3. Once registered, you'll get your API key
+4. Create a `.env.local` file in the project root and add:
+   ```
+   REACT_APP_NEWS_API_KEY=your_api_key_here
+   ```
+
+**Note:** The free tier of News API has some limitations:
+- 100 requests per day
+- Only works on localhost
+- Limited to headlines and top news
+
 ## Features
 
 - 🔐 **User Authentication**
@@ -52,7 +69,7 @@ A responsive React-based dashboard for managing and analyzing news articles with
 ### Prerequisites
 - Node.js (v14 or higher)
 - npm (v6 or higher)
-- News API key (get it from [News API](https://newsapi.org/))
+- News API key (required - see above)
 
 ### Installation
 
@@ -67,10 +84,11 @@ cd news-dashboard
 npm install
 ```
 
-3. Create a `.env.local` file in the root directory and add your News API key:
+3. **Required:** Create a `.env.local` file in the root directory and add your News API key:
 ```
 REACT_APP_NEWS_API_KEY=your_api_key_here
 ```
+Without this API key, the news fetching functionality will not work!
 
 4. Start the development server:
 ```bash
